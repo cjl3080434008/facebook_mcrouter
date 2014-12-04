@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4A5ED873-DB0B-4321-88C0-91E95189B51F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AccessPoint.cpp" />
+    <ClCompile Include="async.cpp" />
+    <ClCompile Include="ConfigApi.cpp" />
+    <ClCompile Include="DestinationClient.cpp" />
+    <ClCompile Include="ExponentialSmoothData.cpp" />
+    <ClCompile Include="FileDataProvider.cpp" />
+    <ClCompile Include="FileObserver.cpp" />
+    <ClCompile Include="flavor.cpp" />
+    <ClCompile Include="lib\config\ConfigPreprocessor.cpp" />
+    <ClCompile Include="lib\config\test\config_preprocessor_test.cpp" />
+    <ClCompile Include="lib\config\test\routehandlefactory_test.cpp" />
+    <ClCompile Include="lib\fbi\asox_queue.c" />
+    <ClCompile Include="lib\fbi\asox_semaphore.c" />
+    <ClCompile Include="lib\fbi\asox_timer.c" />
+    <ClCompile Include="lib\fbi\counter.c" />
+    <ClCompile Include="lib\fbi\counting_sem.c" />
+    <ClCompile Include="lib\fbi\cpp\globals.cpp" />
+    <ClCompile Include="lib\fbi\cpp\LogFailure.cpp" />
+    <ClCompile Include="lib\fbi\cpp\test\ObjectPoolTests.cpp" />
+    <ClCompile Include="lib\fbi\cpp\test\TrieBenchmarks.cpp" />
+    <ClCompile Include="lib\fbi\cpp\test\TrieTests.cpp" />
+    <ClCompile Include="lib\fbi\cpp\util.cpp" />
+    <ClCompile Include="lib\fbi\cwlock.c" />
+    <ClCompile Include="lib\fbi\debug.c" />
+    <ClCompile Include="lib\fbi\error.c" />
+    <ClCompile Include="lib\fbi\examples\thread-errs.c" />
+    <ClCompile Include="lib\fbi\fb_cpu_util.c" />
+    <ClCompile Include="lib\fbi\hash.c" />
+    <ClCompile Include="lib\fbi\lfcalloc.c" />
+    <ClCompile Include="lib\fbi\log_limit.c" />
+    <ClCompile Include="lib\fbi\network.c" />
+    <ClCompile Include="lib\fbi\nstring.c" />
+    <ClCompile Include="lib\fbi\sfrlock.c" />
+    <ClCompile Include="lib\fbi\skiplist.c" />
+    <ClCompile Include="lib\fbi\test\asox_queue_test.cpp" />
+    <ClCompile Include="lib\fbi\test\asox_sem_test.cpp" />
+    <ClCompile Include="lib\fbi\test\counter_test.cpp" />
+    <ClCompile Include="lib\fbi\test\cwlock_test.cpp" />
+    <ClCompile Include="lib\fbi\test\hash_test.cpp" />
+    <ClCompile Include="lib\fbi\test\log_coalesce_test.cpp" />
+    <ClCompile Include="lib\fbi\test\log_tid_tests.cpp" />
+    <ClCompile Include="lib\fbi\test\sem_test.cpp" />
+    <ClCompile Include="lib\fbi\test\sfrlock_test.cpp" />
+    <ClCompile Include="lib\fbi\test\test_util.cpp" />
+    <ClCompile Include="lib\fbi\test\timer_tests.cpp" />
+    <ClCompile Include="lib\fbi\timer.c" />
+    <ClCompile Include="lib\fbi\util.c" />
+    <ClCompile Include="lib\fbi\waitable_count.c" />
+    <ClCompile Include="lib\fibers\Baton.cpp" />
+    <ClCompile Include="lib\fibers\Fiber.cpp" />
+    <ClCompile Include="lib\fibers\FiberManager.cpp" />
+    <ClCompile Include="lib\fibers\test\FibersTest.cpp" />
+    <ClCompile Include="lib\fibers\test\FibersTestApp.cpp" />
+    <ClCompile Include="lib\fibers\test\main.cpp" />
+    <ClCompile Include="lib\fibers\TimeoutController.cpp" />
+    <ClCompile Include="lib\IOBufUtil.cpp" />
+    <ClCompile Include="lib\McReplyBase.cpp" />
+    <ClCompile Include="lib\McRequestBase.cpp" />
+    <ClCompile Include="lib\mc\ascii_response.c" />
+    <ClCompile Include="lib\mc\mc_fbtrace_info.c" />
+    <ClCompile Include="lib\mc\msg.c" />
+    <ClCompile Include="lib\mc\parser.c" />
+    <ClCompile Include="lib\mc\protocol.c" />
+    <ClCompile Include="lib\mc\test\UmbrellaTest.cpp" />
+    <ClCompile Include="lib\mc\umbrella.c" />
+    <ClCompile Include="lib\mc\umbrella_protocol.c" />
+    <ClCompile Include="lib\network\AsyncMcClientImpl.cpp" />
+    <ClCompile Include="lib\network\AsyncMcServer.cpp" />
+    <ClCompile Include="lib\network\AsyncMcServerWorker.cpp" />
+    <ClCompile Include="lib\network\McParser.cpp" />
+    <ClCompile Include="lib\network\McSerializedRequest.cpp" />
+    <ClCompile Include="lib\network\McServerRequestContext.cpp" />
+    <ClCompile Include="lib\network\McServerSession.cpp" />
+    <ClCompile Include="lib\network\MultiOpParent.cpp" />
+    <ClCompile Include="lib\network\test\AsyncMcClientTest.cpp" />
+    <ClCompile Include="lib\network\test\MockMc.cpp" />
+    <ClCompile Include="lib\network\test\MockMcServer.cpp" />
+    <ClCompile Include="lib\network\test\SessionTest.cpp" />
+    <ClCompile Include="lib\network\test\SessionTestHarness.cpp" />
+    <ClCompile Include="lib\network\ThreadLocalSSLContextProvider.cpp" />
+    <ClCompile Include="lib\network\UmbrellaProtocol.cpp" />
+    <ClCompile Include="lib\network\WriteBuffer.cpp" />
+    <ClCompile Include="lib\StatsReply.cpp" />
+    <ClCompile Include="lib\test\Ch3HashTest.cpp" />
+    <ClCompile Include="lib\test\Crc32HashTest.cpp" />
+    <ClCompile Include="lib\test\FailoverRouteTest.cpp" />
+    <ClCompile Include="lib\test\LatestRouteTest.cpp" />
+    <ClCompile Include="lib\test\Main.cpp" />
+    <ClCompile Include="lib\test\MigrateRouteTest.cpp" />
+    <ClCompile Include="lib\test\MissFailoverRouteTest.cpp" />
+    <ClCompile Include="lib\test\RequestReplyTest.cpp" />
+    <ClCompile Include="lib\test\RouteHandleTest.cpp" />
+    <ClCompile Include="lib\test\WarmUpRouteTest.cpp" />
+    <ClCompile Include="lib\test\WeightedCh3HashFuncTest.cpp" />
+    <ClCompile Include="lib\WeightedCh3HashFunc.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="McrouterLogger.cpp" />
+    <ClCompile Include="mcrouter_config.cpp" />
+    <ClCompile Include="options.cpp" />
+    <ClCompile Include="pclient.cpp" />
+    <ClCompile Include="PeriodicTaskScheduler.cpp" />
+    <ClCompile Include="PoolFactory.cpp" />
+    <ClCompile Include="priorities.cpp" />
+    <ClCompile Include="proxy.cpp" />
+    <ClCompile Include="ProxyClientCommon.cpp" />
+    <ClCompile Include="ProxyConfig.cpp" />
+    <ClCompile Include="ProxyConfigBuilder.cpp" />
+    <ClCompile Include="ProxyDestination.cpp" />
+    <ClCompile Include="ProxyDestinationMap.cpp" />
+    <ClCompile Include="ProxyMcReply.cpp" />
+    <ClCompile Include="ProxyMcRequest.cpp" />
+    <ClCompile Include="ProxyRequestContext.cpp" />
+    <ClCompile Include="ProxyThread.cpp" />
+    <ClCompile Include="RecordingContext.cpp" />
+    <ClCompile Include="route.cpp" />
+    <ClCompile Include="router.cpp" />
+    <ClCompile Include="routes\AllAsyncRoute.cpp" />
+    <ClCompile Include="routes\AllFastestRoute.cpp" />
+    <ClCompile Include="routes\AllInitialRoute.cpp" />
+    <ClCompile Include="routes\AllMajorityRoute.cpp" />
+    <ClCompile Include="routes\AllSyncRoute.cpp" />
+    <ClCompile Include="routes\AsynclogRoute.cpp" />
+    <ClCompile Include="routes\BigValueRoute.cpp" />
+    <ClCompile Include="routes\DestinationRoute.cpp" />
+    <ClCompile Include="routes\DevNullRoute.cpp" />
+    <ClCompile Include="routes\ErrorRoute.cpp" />
+    <ClCompile Include="routes\FailoverRoute.cpp" />
+    <ClCompile Include="routes\FailoverWithExptimeRoute.cpp" />
+    <ClCompile Include="routes\FailoverWithExptimeRouteIf.cpp" />
+    <ClCompile Include="routes\HashRoute.cpp" />
+    <ClCompile Include="routes\HostIdRoute.cpp" />
+    <ClCompile Include="routes\LatestRoute.cpp" />
+    <ClCompile Include="routes\McExtraRouteHandleProvider.cpp" />
+    <ClCompile Include="routes\McImportResolver.cpp" />
+    <ClCompile Include="routes\McRouteHandleProvider.cpp" />
+    <ClCompile Include="routes\MigrateRoute.cpp" />
+    <ClCompile Include="routes\MissFailoverRoute.cpp" />
+    <ClCompile Include="routes\NullRoute.cpp" />
+    <ClCompile Include="routes\PrefixPolicyRoute.cpp" />
+    <ClCompile Include="routes\PrefixRouteSelector.cpp" />
+    <ClCompile Include="routes\RateLimiter.cpp" />
+    <ClCompile Include="routes\RateLimitRoute.cpp" />
+    <ClCompile Include="routes\ReliablePoolRoute.cpp" />
+    <ClCompile Include="routes\RouteHandleMap.cpp" />
+    <ClCompile Include="routes\RoutePolicyMap.cpp" />
+    <ClCompile Include="routes\ShadowRoute.cpp" />
+    <ClCompile Include="routes\ShardHashFunc.cpp" />
+    <ClCompile Include="routes\ShardSplitRoute.cpp" />
+    <ClCompile Include="routes\ShardSplitter.cpp" />
+    <ClCompile Include="routes\test\BigValueRouteTest.cpp" />
+    <ClCompile Include="routes\test\ConstShardHashFuncTest.cpp" />
+    <ClCompile Include="routes\test\FailoverWithExptimeRouteTest.cpp" />
+    <ClCompile Include="routes\test\Main.cpp" />
+    <ClCompile Include="routes\test\RateLimitRouteTest.cpp" />
+    <ClCompile Include="routes\test\ReliablePoolRouteTest.cpp" />
+    <ClCompile Include="routes\test\ShadowRouteTest.cpp" />
+    <ClCompile Include="routes\WarmUpRoute.cpp" />
+    <ClCompile Include="RoutingPrefix.cpp" />
+    <ClCompile Include="RuntimeVarsData.cpp" />
+    <ClCompile Include="server.cpp" />
+    <ClCompile Include="ServiceInfo.cpp" />
+    <ClCompile Include="standalone_options.cpp" />
+    <ClCompile Include="stats.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\AccessPointTest.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\awriter_test.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\config_api_test.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\file_observer_test.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\libmcrouter_test.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\mcrouter_cpp_tests.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\mcrouter_test_client.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\mc_route_handle_provider_test.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\MemcacheLocal.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\observable_test.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\options_test.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\periodic_task_scheduler_test.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\route_test.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\runtime_vars_data_test.cpp" />
+    <ClCompile Include="test\cpp_unit_tests\TokenBucketTest.cpp" />
+    <ClCompile Include="TkoLog.cpp" />
+    <ClCompile Include="TkoTracker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccessPoint.h" />
+    <ClInclude Include="async.h" />
+    <ClInclude Include="AtomicTokenBucket.h" />
+    <ClInclude Include="awriter.h" />
+    <ClInclude Include="CallbackPool-inl.h" />
+    <ClInclude Include="CallbackPool.h" />
+    <ClInclude Include="ConfigApi.h" />
+    <ClInclude Include="DestinationClient.h" />
+    <ClInclude Include="ExponentialSmoothData.h" />
+    <ClInclude Include="FileDataProvider.h" />
+    <ClInclude Include="FileObserver.h" />
+    <ClInclude Include="flavor.h" />
+    <ClInclude Include="lib\Ch3HashFunc.h" />
+    <ClInclude Include="lib\config\ConfigPreprocessor.h" />
+    <ClInclude Include="lib\config\ImportResolverIf.h" />
+    <ClInclude Include="lib\config\RouteHandleBuilder.h" />
+    <ClInclude Include="lib\config\RouteHandleFactory-inl.h" />
+    <ClInclude Include="lib\config\RouteHandleFactory.h" />
+    <ClInclude Include="lib\config\RouteHandleProvider-inl.h" />
+    <ClInclude Include="lib\config\RouteHandleProvider.h" />
+    <ClInclude Include="lib\config\RouteHandleProviderIf.h" />
+    <ClInclude Include="lib\config\test\TestRouteHandleProvider.h" />
+    <ClInclude Include="lib\Crc32HashFunc.h" />
+    <ClInclude Include="lib\fbi\asox_queue.h" />
+    <ClInclude Include="lib\fbi\asox_semaphore.h" />
+    <ClInclude Include="lib\fbi\asox_timer.h" />
+    <ClInclude Include="lib\fbi\counter.h" />
+    <ClInclude Include="lib\fbi\counting_sem.h" />
+    <ClInclude Include="lib\fbi\cpp\AtomicLinkedList.h" />
+    <ClInclude Include="lib\fbi\cpp\AtomicSharedPtr.h" />
+    <ClInclude Include="lib\fbi\cpp\globals.h" />
+    <ClInclude Include="lib\fbi\cpp\LogFailure.h" />
+    <ClInclude Include="lib\fbi\cpp\ObjectPool.h" />
+    <ClInclude Include="lib\fbi\cpp\sfrlock.h" />
+    <ClInclude Include="lib\fbi\cpp\ShutdownLock.h" />
+    <ClInclude Include="lib\fbi\cpp\StartupLock.h" />
+    <ClInclude Include="lib\fbi\cpp\traits.h" />
+    <ClInclude Include="lib\fbi\cpp\Trie-inl.h" />
+    <ClInclude Include="lib\fbi\cpp\Trie.h" />
+    <ClInclude Include="lib\fbi\cpp\TypeList.h" />
+    <ClInclude Include="lib\fbi\cpp\util.h" />
+    <ClInclude Include="lib\fbi\cwlock.h" />
+    <ClInclude Include="lib\fbi\debug.h" />
+    <ClInclude Include="lib\fbi\decls.h" />
+    <ClInclude Include="lib\fbi\error.h" />
+    <ClInclude Include="lib\fbi\fb_cpu_util.h" />
+    <ClInclude Include="lib\fbi\hash.h" />
+    <ClInclude Include="lib\fbi\lfcalloc.h" />
+    <ClInclude Include="lib\fbi\log_limit.h" />
+    <ClInclude Include="lib\fbi\network.h" />
+    <ClInclude Include="lib\fbi\nstring.h" />
+    <ClInclude Include="lib\fbi\queue.h" />
+    <ClInclude Include="lib\fbi\sfrlock.h" />
+    <ClInclude Include="lib\fbi\skiplist.h" />
+    <ClInclude Include="lib\fbi\test\test_util.h" />
+    <ClInclude Include="lib\fbi\time.h" />
+    <ClInclude Include="lib\fbi\timer.h" />
+    <ClInclude Include="lib\fbi\unix.h" />
+    <ClInclude Include="lib\fbi\util.h" />
+    <ClInclude Include="lib\fbi\waitable_count.h" />
+    <ClInclude Include="lib\fibers\AddTasks-inl.h" />
+    <ClInclude Include="lib\fibers\AddTasks.h" />
+    <ClInclude Include="lib\fibers\Baton-inl.h" />
+    <ClInclude Include="lib\fibers\Baton.h" />
+    <ClInclude Include="lib\fibers\BoostContextCompatibility.h" />
+    <ClInclude Include="lib\fibers\EventBaseLoopController-inl.h" />
+    <ClInclude Include="lib\fibers\EventBaseLoopController.h" />
+    <ClInclude Include="lib\fibers\Fiber-inl.h" />
+    <ClInclude Include="lib\fibers\Fiber.h" />
+    <ClInclude Include="lib\fibers\FiberManager-inl.h" />
+    <ClInclude Include="lib\fibers\FiberManager.h" />
+    <ClInclude Include="lib\fibers\FiberPromise-inl.h" />
+    <ClInclude Include="lib\fibers\FiberPromise.h" />
+    <ClInclude Include="lib\fibers\ForEach-inl.h" />
+    <ClInclude Include="lib\fibers\ForEach.h" />
+    <ClInclude Include="lib\fibers\GenericBaton.h" />
+    <ClInclude Include="lib\fibers\GuardPageAllocator-inl.h" />
+    <ClInclude Include="lib\fibers\GuardPageAllocator.h" />
+    <ClInclude Include="lib\fibers\LoopController.h" />
+    <ClInclude Include="lib\fibers\SimpleLoopController.h" />
+    <ClInclude Include="lib\fibers\TimeoutController.h" />
+    <ClInclude Include="lib\fibers\WhenN-inl.h" />
+    <ClInclude Include="lib\fibers\WhenN.h" />
+    <ClInclude Include="lib\IOBufUtil.h" />
+    <ClInclude Include="lib\McMsgRef.h" />
+    <ClInclude Include="lib\McOperation.h" />
+    <ClInclude Include="lib\McOperationTraits.h" />
+    <ClInclude Include="lib\McOpList.h" />
+    <ClInclude Include="lib\McReply.h" />
+    <ClInclude Include="lib\McReplyBase-inl.h" />
+    <ClInclude Include="lib\McReplyBase.h" />
+    <ClInclude Include="lib\McRequest.h" />
+    <ClInclude Include="lib\McRequestBase.h" />
+    <ClInclude Include="lib\McRequestWithContext-inl.h" />
+    <ClInclude Include="lib\McRequestWithContext.h" />
+    <ClInclude Include="lib\mc\ascii_client.h" />
+    <ClInclude Include="lib\mc\ascii_response.h" />
+    <ClInclude Include="lib\mc\mc_fbtrace_info.h" />
+    <ClInclude Include="lib\mc\msg.h" />
+    <ClInclude Include="lib\mc\parser.h" />
+    <ClInclude Include="lib\mc\protocol.h" />
+    <ClInclude Include="lib\mc\umbrella.h" />
+    <ClInclude Include="lib\mc\umbrella_conv.h" />
+    <ClInclude Include="lib\mc\umbrella_protocol.h" />
+    <ClInclude Include="lib\mc\util.h" />
+    <ClInclude Include="lib\mc\_protocol.h" />
+    <ClInclude Include="lib\network\AsyncMcClient-inl.h" />
+    <ClInclude Include="lib\network\AsyncMcClient.h" />
+    <ClInclude Include="lib\network\AsyncMcClientImpl-inl.h" />
+    <ClInclude Include="lib\network\AsyncMcClientImpl.h" />
+    <ClInclude Include="lib\network\AsyncMcServer.h" />
+    <ClInclude Include="lib\network\AsyncMcServerWorker.h" />
+    <ClInclude Include="lib\network\AsyncMcServerWorkerOptions.h" />
+    <ClInclude Include="lib\network\ConnectionOptions.h" />
+    <ClInclude Include="lib\network\McParser.h" />
+    <ClInclude Include="lib\network\McSerializedRequest.h" />
+    <ClInclude Include="lib\network\McServerRequestContext-inl.h" />
+    <ClInclude Include="lib\network\McServerRequestContext.h" />
+    <ClInclude Include="lib\network\McServerSession.h" />
+    <ClInclude Include="lib\network\MultiOpParent.h" />
+    <ClInclude Include="lib\network\test\MockMc.h" />
+    <ClInclude Include="lib\network\test\SessionTestHarness.h" />
+    <ClInclude Include="lib\network\test\TestUtil.h" />
+    <ClInclude Include="lib\network\ThreadLocalSSLContextProvider.h" />
+    <ClInclude Include="lib\network\UmbrellaProtocol.h" />
+    <ClInclude Include="lib\network\UniqueIntrusiveList.h" />
+    <ClInclude Include="lib\network\WriteBuffer.h" />
+    <ClInclude Include="lib\Operation.h" />
+    <ClInclude Include="lib\OperationTraits.h" />
+    <ClInclude Include="lib\Reply.h" />
+    <ClInclude Include="lib\RouteHandleIf.h" />
+    <ClInclude Include="lib\routes\AllAsyncRoute.h" />
+    <ClInclude Include="lib\routes\AllFastestRoute.h" />
+    <ClInclude Include="lib\routes\AllInitialRoute.h" />
+    <ClInclude Include="lib\routes\AllMajorityRoute.h" />
+    <ClInclude Include="lib\routes\AllSyncRoute.h" />
+    <ClInclude Include="lib\routes\ErrorRoute.h" />
+    <ClInclude Include="lib\routes\FailoverRoute.h" />
+    <ClInclude Include="lib\routes\HashRoute.h" />
+    <ClInclude Include="lib\routes\HostIdRoute.h" />
+    <ClInclude Include="lib\routes\LatestRoute.h" />
+    <ClInclude Include="lib\routes\MigrateRoute.h" />
+    <ClInclude Include="lib\routes\MissFailoverRoute.h" />
+    <ClInclude Include="lib\routes\NullRoute.h" />
+    <ClInclude Include="lib\routes\WarmUpRoute.h" />
+    <ClInclude Include="lib\StatsReply.h" />
+    <ClInclude Include="lib\test\RouteHandleTestUtil.h" />
+    <ClInclude Include="lib\test\TestRequest.h" />
+    <ClInclude Include="lib\test\TestRouteHandle.h" />
+    <ClInclude Include="lib\WeightedCh3HashFunc.h" />
+    <ClInclude Include="LoggingProxyRequestContext.h" />
+    <ClInclude Include="McrouterLogFailure.h" />
+    <ClInclude Include="McrouterLogger.h" />
+    <ClInclude Include="mcrouter_client.h" />
+    <ClInclude Include="mcrouter_config-impl.h" />
+    <ClInclude Include="mcrouter_config.h" />
+    <ClInclude Include="mcrouter_options_list.h" />
+    <ClInclude Include="Observable-inl.h" />
+    <ClInclude Include="Observable.h" />
+    <ClInclude Include="options-template.h" />
+    <ClInclude Include="options.h" />
+    <ClInclude Include="pclient-inl.h" />
+    <ClInclude Include="pclient.h" />
+    <ClInclude Include="PeriodicTaskScheduler.h" />
+    <ClInclude Include="PoolFactory.h" />
+    <ClInclude Include="PoolFactoryIf.h" />
+    <ClInclude Include="priorities.h" />
+    <ClInclude Include="proxy.h" />
+    <ClInclude Include="ProxyClientCommon.h" />
+    <ClInclude Include="ProxyConfig.h" />
+    <ClInclude Include="ProxyConfigBuilder.h" />
+    <ClInclude Include="ProxyConfigIf.h" />
+    <ClInclude Include="ProxyDestination.h" />
+    <ClInclude Include="ProxyDestinationMap.h" />
+    <ClInclude Include="ProxyMcReply.h" />
+    <ClInclude Include="ProxyMcRequest.h" />
+    <ClInclude Include="ProxyRequestContext.h" />
+    <ClInclude Include="ProxyRequestLogger-inl.h" />
+    <ClInclude Include="ProxyRequestLogger.h" />
+    <ClInclude Include="ProxyThread.h" />
+    <ClInclude Include="RecordingContext.h" />
+    <ClInclude Include="route.h" />
+    <ClInclude Include="router.h" />
+    <ClInclude Include="routes\AsynclogRoute.h" />
+    <ClInclude Include="routes\BigValueRoute-inl.h" />
+    <ClInclude Include="routes\BigValueRoute.h" />
+    <ClInclude Include="routes\BigValueRouteIf.h" />
+    <ClInclude Include="routes\DefaultShadowPolicy.h" />
+    <ClInclude Include="routes\DestinationRoute.h" />
+    <ClInclude Include="routes\DevNullRoute.h" />
+    <ClInclude Include="routes\ExtraRouteHandleProviderIf.h" />
+    <ClInclude Include="routes\FailoverWithExptimeRoute.h" />
+    <ClInclude Include="routes\FailoverWithExptimeRouteIf.h" />
+    <ClInclude Include="routes\McExtraRouteHandleProvider.h" />
+    <ClInclude Include="routes\McImportResolver.h" />
+    <ClInclude Include="routes\McOpList.h" />
+    <ClInclude Include="routes\McRouteHandleBuilder.h" />
+    <ClInclude Include="routes\McRouteHandleProvider.h" />
+    <ClInclude Include="routes\McrouterRouteHandle.h" />
+    <ClInclude Include="routes\PrefixPolicyRoute.h" />
+    <ClInclude Include="routes\PrefixRouteSelector.h" />
+    <ClInclude Include="routes\ProxyRoute.h" />
+    <ClInclude Include="routes\RateLimiter.h" />
+    <ClInclude Include="routes\RateLimitRoute.h" />
+    <ClInclude Include="routes\ReliablePoolRoute.h" />
+    <ClInclude Include="routes\RootRoute.h" />
+    <ClInclude Include="routes\RouteHandleMap.h" />
+    <ClInclude Include="routes\RoutePolicyMap.h" />
+    <ClInclude Include="routes\RouteSelectorMap.h" />
+    <ClInclude Include="routes\ShadowRoute.h" />
+    <ClInclude Include="routes\ShadowRouteIf.h" />
+    <ClInclude Include="routes\ShardHashFunc.h" />
+    <ClInclude Include="routes\ShardSplitRoute.h" />
+    <ClInclude Include="routes\ShardSplitter.h" />
+    <ClInclude Include="routes\TimeProviderFunc.h" />
+    <ClInclude Include="RoutingPrefix.h" />
+    <ClInclude Include="RuntimeVarsData.h" />
+    <ClInclude Include="server.h" />
+    <ClInclude Include="ServiceInfo.h" />
+    <ClInclude Include="standalone_options.h" />
+    <ClInclude Include="standalone_options_list.h" />
+    <ClInclude Include="stats.h" />
+    <ClInclude Include="stat_list.h" />
+    <ClInclude Include="test\cpp_unit_tests\mcrouter_test_client.h" />
+    <ClInclude Include="test\cpp_unit_tests\MemcacheLocal.h" />
+    <ClInclude Include="TkoCounters.h" />
+    <ClInclude Include="TkoLog.h" />
+    <ClInclude Include="TkoTracker.h" />
+    <ClInclude Include="TokenBucket.h" />
+    <ClInclude Include="_router.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
